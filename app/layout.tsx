@@ -26,8 +26,8 @@ const notoSerifTC = Noto_Serif_TC({
 })
 
 export const metadata: Metadata = {
-  title: '葉書魁 Calvin Yeh｜HR 內容架構師 × TCC Group',
-  description: '互動式履歷 — 數位行銷 × 組織變革溝通 × AI 驅動內容生產',
+  title: '葉書魁 Calvin Yeh｜TCC Group HR 內容架構師 應徵',
+  description: '七年跨界實戰｜AI 工具驅動內容產出｜變革溝通 × 培訓設計 × 數位專案管理',
 }
 
 export default function RootLayout({

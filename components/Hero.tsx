@@ -13,19 +13,25 @@ export default function Hero() {
               Calvin Yeh
             </h1>
             <p className="hero-subtitle">
-              數位行銷 × 組織變革溝通 × AI 驅動內容生產
+              內容策略 × 變革溝通設計 × AI 工具整合
+            </p>
+            <p className="hero-en-tagline">
+              "I translate complex systems into stories people actually want to follow."
             </p>
             <p className="hero-quote">
-              我不是傳統人資背景——我來自數位轉型的第一線。
+              過去七年，我在三個截然不同的場域做同一件事：
               <br />
-              在軍隊裡推動過 Excel 數位化取代紙本；
-              <br />
-              在新創從零建起行銷架構並帶進 500 萬元營收；
-              <br />
-              在非營利組織讓 BigQuery 數據說話、讓 App 上線留存。
+              把複雜的系統、流程和制度，翻譯成人們聽得懂並願意跟進的語言。
               <br />
               <br />
-              HR 內容架構師，是把這一切整合起來最自然的舞台。
+              軍隊裡，我說服 10 位習慣紙本的成員切換到數位系統；
+              <br />
+              新創裡，我從零建起行銷架構，把潛在客戶的疑慮轉化成付費決策；
+              <br />
+              非營利組織裡，我讓數據在簡報裡說話，讓 App 在期限內上線。
+              <br />
+              <br />
+              這件事有個正式的名字叫「變革溝通」。而 TCC 現在需要的，正是這個。
             </p>
           </div>
 
@@ -55,7 +61,7 @@ export default function Hero() {
               <div className="stat-box">
                 <span className="stat-num">15+</span>
                 <span className="stat-lbl">
-                  Power BI
+                  Power BI 自動化
                   <br />
                   儀表板
                 </span>
@@ -63,25 +69,25 @@ export default function Hero() {
               <div className="stat-box">
                 <span className="stat-num">200+</span>
                 <span className="stat-lbl">
-                  培訓設計
+                  人次技術培訓
                   <br />
-                  人次
+                  設計與交付
                 </span>
               </div>
               <div className="stat-box">
                 <span className="stat-num">70%</span>
                 <span className="stat-lbl">
-                  銷售轉換率
+                  潛客成交率
                   <br />
-                  新創實績
+                  （35/50 人轉換）
                 </span>
               </div>
               <div className="stat-box">
                 <span className="stat-num">7yr</span>
                 <span className="stat-lbl">
-                  跨產業
+                  三產業
                   <br />
-                  實戰經歷
+                  跨界實戰
                 </span>
               </div>
             </div>

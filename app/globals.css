@@ -144,6 +144,14 @@ body {
   opacity: 0;
   animation: up 0.7s ease forwards 0.5s;
 }
+.hero-en-tagline {
+  font-family: var(--font-dm-mono);
+  font-size: 12px;
+  color: rgba(243, 236, 224, 0.5);
+  letter-spacing: 0.03em;
+  margin: 6px 0 20px;
+  font-style: italic;
+}
 .hero-quote {
   font-size: 13.5px;
   color: rgba(243, 236, 224, 0.58);
@@ -656,7 +664,7 @@ section { padding: 80px 0; }
   #hero::after { display: none; }
   .hero-grid { padding: 0; gap: 36px; grid-template-columns: 1fr 290px; }
   .hero-name { font-size: 52px; }
-  .hero-eyebrow, .hero-name, .hero-subtitle, .hero-quote, .hero-card {
+  .hero-eyebrow, .hero-name, .hero-subtitle, .hero-en-tagline, .hero-quote, .hero-card {
     opacity: 1 !important; animation: none !important;
   }
 

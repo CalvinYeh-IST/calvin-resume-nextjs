@@ -3,7 +3,7 @@ const items = [
   { check: '✅', label: '培訓設計', text: '20+ 場培訓企劃，可複用知識架構設計' },
   { check: '✅', label: '影音製作', text: '見證式影音廣告規劃與拍攝，腳本撰寫' },
   { check: '✅', label: '流程自動化', text: 'Excel 自動化、Power BI、Vibe Coding no-code 工具' },
-  { check: '🔜', label: '自主創作', text: '持續建立個人作品集，歡迎面試時進一步交流' },
+  { check: '✅', label: '自主創作', text: '本履歷即為完整的自主創作案例：以 Next.js 架設、內建 AI 對話介面的互動式作品集，從架構設計、內容撰寫到 AI 工具整合，完整展示 HR 內容架構師的核心能力組合' },
 ]
 
 export default function Bonus() {
