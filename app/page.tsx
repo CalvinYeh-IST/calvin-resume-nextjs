@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import StatsStrip from '@/components/StatsStrip'
 import Positioning from '@/components/Positioning'
 import Pillars from '@/components/Pillars'
 import Experience from '@/components/Experience'
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <StatsStrip />
         <Positioning />
         <Pillars />
         <Experience />

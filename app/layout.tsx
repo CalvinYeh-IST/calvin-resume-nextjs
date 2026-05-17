@@ -1,23 +1,15 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, DM_Mono, Noto_Serif_TC } from 'next/font/google'
+import { Inter, Noto_Sans_TC } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-dm-mono',
-  display: 'swap',
-})
-
-const notoSerifTC = Noto_Serif_TC({
+const notoSansTC = Noto_Sans_TC({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
   variable: '--font-noto',
@@ -30,16 +22,9 @@ export const metadata: Metadata = {
   description: '七年跨界實戰｜AI 工具驅動內容產出｜變革溝通 × 培訓設計 × 數位專案管理',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="zh-TW"
-      className={`${cormorant.variable} ${dmMono.variable} ${notoSerifTC.variable}`}
-    >
+    <html lang="zh-TW" className={`${inter.variable} ${notoSansTC.variable}`}>
       <body>{children}</body>
     </html>
   )

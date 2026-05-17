@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="hero-grid">
           <div>
             <p className="hero-eyebrow">
-              TCC Group · HRIS Core Team · HR 內容架構師 候選人
+              TCC GROUP · HRIS CORE TEAM · HR 內容架構師 候選人
             </p>
             <h1 className="hero-name">
               葉書<em>魁</em>
@@ -19,20 +19,18 @@ export default function Hero() {
               "I translate complex systems into stories people actually want to follow."
             </p>
             <p className="hero-quote">
-              過去七年，我在三個截然不同的場域做同一件事：
+              過去七年，
               <br />
-              把複雜的系統、流程和制度，翻譯成人們聽得懂並願意跟進的語言。
+              我做的只有一件事——
               <br />
+              把複雜的系統，
               <br />
-              軍隊裡，我說服 10 位習慣紙本的成員切換到數位系統；
-              <br />
-              新創裡，我從零建起行銷架構，把潛在客戶的疑慮轉化成付費決策；
-              <br />
-              非營利組織裡，我讓數據在簡報裡說話，讓 App 在期限內上線。
-              <br />
-              <br />
-              這件事有個正式的名字叫「變革溝通」。而 TCC 現在需要的，正是這個。
+              翻譯成人們願意跟進的語言。
             </p>
+            <div className="hero-ctas">
+              <a href="#chat" className="btn-primary">直接對話</a>
+              <a href="#positioning" className="btn-secondary">了解更多</a>
+            </div>
           </div>
 
           <div className="hero-card">
@@ -55,44 +53,15 @@ export default function Hero() {
                 linkedin.com/in/shukuei-yeh
               </a>
             </div>
-            <hr className="card-divider" />
-            <p className="card-label">核心數字</p>
-            <div className="stats-grid">
-              <div className="stat-box">
-                <span className="stat-num">15+</span>
-                <span className="stat-lbl">
-                  Power BI 自動化
-                  <br />
-                  儀表板
-                </span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-num">200+</span>
-                <span className="stat-lbl">
-                  人次技術培訓
-                  <br />
-                  設計與交付
-                </span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-num">70%</span>
-                <span className="stat-lbl">
-                  潛客成交率
-                  <br />
-                  （35/50 人轉換）
-                </span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-num">7yr</span>
-                <span className="stat-lbl">
-                  三產業
-                  <br />
-                  跨界實戰
-                </span>
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+
+      <div className="hero-scroll">
+        <svg width="18" height="22" viewBox="0 0 18 22" fill="none">
+          <rect x="1" y="1" width="16" height="20" rx="8" stroke="currentColor" strokeWidth="1.5"/>
+          <line x1="9" y1="6" x2="9" y2="11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
       </div>
     </section>
   )
