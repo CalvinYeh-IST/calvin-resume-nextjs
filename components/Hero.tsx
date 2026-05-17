@@ -1,26 +1,45 @@
 export default function Hero() {
   return (
     <section id="hero">
-      {/* Decorative twin-arc — references TCC's two interlocking loops */}
+      {/* TCC twin-loop — two interlocking arcs echoing the infinity logo symbol */}
       <div className="hero-arc" aria-hidden="true">
         <svg viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Outer containing ring */}
-          <circle cx="350" cy="350" r="328" stroke="rgba(175,180,188,0.11)" strokeWidth="1"/>
-          {/* Left loop — silver, TCC logo's gray loop */}
-          <circle cx="248" cy="350" r="218" stroke="rgba(180,185,192,0.22)" strokeWidth="2"/>
-          {/* Right loop — TCC logo's second loop */}
-          <circle cx="452" cy="350" r="218" stroke="rgba(162,165,170,0.13)" strokeWidth="1.5"/>
-          {/* Brand red accent arc — upper-right quarter of right loop */}
+          <defs>
+            {/* Silver gradient for left loop — light on outer edge, darker inside */}
+            <linearGradient id="lgLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#D2D6DC" stopOpacity="0.60"/>
+              <stop offset="38%" stopColor="#A8ADB5" stopOpacity="0.38"/>
+              <stop offset="100%" stopColor="#6B7280" stopOpacity="0.10"/>
+            </linearGradient>
+            {/* Slightly darker gradient for right loop */}
+            <linearGradient id="lgRight" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#B0B5BC" stopOpacity="0.42"/>
+              <stop offset="100%" stopColor="#6B7280" stopOpacity="0.08"/>
+            </linearGradient>
+          </defs>
+
+          {/* Outer frame ring — very subtle, defines overall scale */}
+          <circle cx="350" cy="350" r="322" stroke="rgba(162,165,170,0.10)" strokeWidth="1"/>
+
+          {/* Left loop — dominant silver (TCC left loop) */}
+          <circle cx="258" cy="350" r="225" stroke="url(#lgLeft)" strokeWidth="4"/>
+          <circle cx="258" cy="350" r="218" stroke="rgba(200,205,212,0.16)" strokeWidth="1"/>
+          <circle cx="258" cy="350" r="232" stroke="rgba(145,150,158,0.10)" strokeWidth="1"/>
+
+          {/* Right loop — secondary (TCC right loop) */}
+          <circle cx="442" cy="350" r="225" stroke="url(#lgRight)" strokeWidth="3"/>
+          <circle cx="442" cy="350" r="218" stroke="rgba(162,168,175,0.12)" strokeWidth="1"/>
+
+          {/* Brand red accent arc: upper-right quarter of right loop */}
           <path
             className="arc-accent"
-            d="M 452 132 A 218 218 0 0 1 670 350"
-            stroke="rgba(201,64,53,0.55)"
-            strokeWidth="2.5"
+            d="M 442 125 A 225 225 0 0 1 667 350"
+            stroke="rgba(201,64,53,0.65)"
+            strokeWidth="3"
             strokeLinecap="round"
           />
-          {/* Terminal dots at arc endpoints */}
-          <circle cx="452" cy="132" r="3.5" fill="rgba(201,64,53,0.65)"/>
-          <circle cx="670" cy="350" r="3.5" fill="rgba(201,64,53,0.65)"/>
+          <circle cx="442" cy="125" r="4.5" fill="rgba(201,64,53,0.80)"/>
+          <circle cx="667" cy="350" r="4.5" fill="rgba(201,64,53,0.80)"/>
         </svg>
       </div>
 

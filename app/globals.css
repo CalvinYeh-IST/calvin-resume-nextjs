@@ -82,17 +82,10 @@ section { padding: 80px 0; }
 /* ── HERO ─────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
+  /* 乾淨深色底：銀灰感完全交給右側的 SVG 弧環，左邊文字區不受干擾 */
   background:
-    /* 對角銀灰光帶：左上強光 → 右下漸暗，製造拋光水泥感 */
-    linear-gradient(118deg,
-      rgba(205,210,216,0.38) 0%,
-      rgba(175,180,188,0.20) 25%,
-      rgba(155,160,168,0.08) 48%,
-      transparent 65%),
-    /* 右側弧形區域的銀光暈，呼應 TCC 無限符號圓環 */
-    radial-gradient(ellipse at 80% 44%, rgba(160,165,172,0.18) 0%, transparent 50%),
-    /* 基底：從較淡的藍灰 → 略深的炭藍，不再是近黑 */
-    linear-gradient(155deg, #1C2232 0%, #232D40 28%, #1A2238 55%, #111826 100%);
+    radial-gradient(ellipse at 84% 50%, rgba(155,160,168,0.18) 0%, transparent 46%),
+    linear-gradient(160deg, #111724 0%, #192030 48%, #111724 100%);
   display: flex; align-items: center;
   position: relative; overflow: hidden;
   padding: 80px 0;
@@ -100,33 +93,35 @@ section { padding: 80px 0; }
 #hero::before {
   content: '';
   position: absolute; inset: 0;
-  /* 細格紋：在較淡的背景上稍微可見 */
   background-image:
-    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
   background-size: 64px 64px, 64px 64px;
 }
 
-/* TCC twin-loop arc — decorative SVG container */
+/* TCC twin-loop arc */
 .hero-arc {
   position: absolute;
-  right: -90px;
+  right: -80px;
   top: 50%;
   transform: translateY(-50%);
-  width: 680px; height: 680px;
+  width: 780px; height: 780px;
   pointer-events: none;
   z-index: 0;
+  /* 左側漸淡，避免弧環壓到文字；右側完整顯示 */
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, black 40%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 22%, black 40%);
 }
 .arc-accent {
-  stroke-dasharray: 342;
-  stroke-dashoffset: 342;
+  stroke-dasharray: 354;
+  stroke-dashoffset: 354;
   animation: arc-draw 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
 }
 @keyframes arc-draw {
   to { stroke-dashoffset: 0; }
 }
 @media (max-width: 768px) {
-  .hero-arc { width: 320px; height: 320px; right: -60px; opacity: 0.55; }
+  .hero-arc { width: 340px; height: 340px; right: -50px; }
 }
 .hero-grid {
   position: relative; z-index: 1;
