@@ -4,10 +4,6 @@ export default function Hero() {
       <div className="wrap">
         <div className="hero-grid">
           <div>
-            <div className="sustain-badge">
-              <span className="sustain-dot">●</span>
-              TCC 永續轉型 × AI 驅動
-            </div>
             <p className="hero-eyebrow">
               TCC GROUP · HRIS CORE TEAM · HR 內容架構師 候選人
             </p>

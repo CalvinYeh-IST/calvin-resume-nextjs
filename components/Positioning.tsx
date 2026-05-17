@@ -24,13 +24,6 @@ export default function Positioning() {
             <br />
             先搞清楚對方的疑慮是什麼，再決定怎麼說。」
           </div>
-          <div className="sustain-highlight">
-            <strong>TCC 永續轉型的核心，不只是能源結構的改變，而是人的改變。</strong>
-            <br />
-            HRIS 的導入、AI 工作流的建立、HR 知識庫的架設——這些都是讓組織有能力長期演進的基礎建設。
-            我在看見台灣基金會的工作，讓我習慣在資源有限的環境下推動有意義的改變、讓不同背景的人接受新的工作方式。
-            這是 TCC 正在走的路，也是我想投入的事。
-          </div>
         </div>
       </div>
     </section>

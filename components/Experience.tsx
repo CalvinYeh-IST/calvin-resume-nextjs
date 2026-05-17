@@ -55,8 +55,8 @@ export default function Experience() {
           <span className="sec-line" />
         </div>
         <div className="timeline">
-          {jobs.map((job) => (
-            <div key={job.role} className="tl-item reveal">
+          {jobs.map((job, idx) => (
+            <div key={job.role} className={`tl-item reveal${idx === 0 ? ' tl-current' : ''}`}>
               <div className="tl-head">
                 <h3 className="tl-role">{job.role}</h3>
                 <span className="tl-date">{job.date}</span>
