@@ -82,8 +82,9 @@ section { padding: 80px 0; }
 /* ── HERO ─────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
-  /* 水泥銀灰漸層：深海藍 → 冷灰藍 → 深海藍，呼應 TCC logo 左灰右紅的視覺語言 */
-  background: linear-gradient(150deg, #061322 0%, #0F1B28 28%, #1D2530 52%, #0F1B28 74%, #061322 100%);
+  background:
+    radial-gradient(ellipse at 72% 50%, rgba(162,165,170,0.055) 0%, transparent 52%),
+    linear-gradient(150deg, #061322 0%, #0F1B28 28%, #1D2530 52%, #0F1B28 74%, #061322 100%);
   display: flex; align-items: center;
   position: relative; overflow: hidden;
   padding: 80px 0;
@@ -91,12 +92,32 @@ section { padding: 80px 0; }
 #hero::before {
   content: '';
   position: absolute; inset: 0;
-  /* 右上角冷銀光暈（模擬拋光水泥的反光）+ 細格紋 */
   background-image:
-    radial-gradient(ellipse at 72% 22%, rgba(162,165,170,0.10) 0%, rgba(162,165,170,0.03) 35%, transparent 60%),
-    linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
-  background-size: 100% 100%, 64px 64px, 64px 64px;
+    linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px;
+}
+
+/* TCC twin-loop arc — decorative SVG container */
+.hero-arc {
+  position: absolute;
+  right: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 680px; height: 680px;
+  pointer-events: none;
+  z-index: 0;
+}
+.arc-accent {
+  stroke-dasharray: 342;
+  stroke-dashoffset: 342;
+  animation: arc-draw 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
+}
+@keyframes arc-draw {
+  to { stroke-dashoffset: 0; }
+}
+@media (max-width: 768px) {
+  .hero-arc { width: 320px; height: 320px; right: -60px; opacity: 0.55; }
 }
 .hero-grid {
   position: relative; z-index: 1;
@@ -113,14 +134,35 @@ section { padding: 80px 0; }
   opacity: 0; animation: up 0.7s ease forwards 0.2s;
 }
 .hero-name {
-  font-family: var(--font-inter), var(--font-noto), sans-serif;
-  font-size: clamp(42px, 5.5vw, 70px);
-  color: #ffffff; font-weight: 700;
-  line-height: 1.1; letter-spacing: -0.02em;
-  margin-bottom: 14px;
+  line-height: 1;
+  margin-bottom: 20px;
   opacity: 0; animation: up 0.7s ease forwards 0.35s;
 }
-.hero-name em { font-style: normal; color: var(--color-brand-red); }
+.hero-name-cn {
+  display: block;
+  font-family: var(--font-noto), sans-serif;
+  font-size: clamp(52px, 6.8vw, 86px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  line-height: 1.05;
+}
+.hero-name-divider {
+  display: block;
+  width: 36px; height: 2.5px;
+  background: var(--color-brand-red);
+  margin: 12px 0;
+}
+.hero-name-en {
+  display: block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 500;
+  color: var(--color-brand-red);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  line-height: 1;
+}
 .hero-subtitle {
   font-family: var(--font-inter), var(--font-noto), sans-serif;
   font-size: 13px; color: rgba(255,255,255,0.5);

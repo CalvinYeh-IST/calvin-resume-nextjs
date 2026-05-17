@@ -1,6 +1,29 @@
 export default function Hero() {
   return (
     <section id="hero">
+      {/* Decorative twin-arc — references TCC's two interlocking loops */}
+      <div className="hero-arc" aria-hidden="true">
+        <svg viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Outer containing ring */}
+          <circle cx="350" cy="350" r="328" stroke="rgba(162,165,170,0.06)" strokeWidth="1"/>
+          {/* Left loop — silver, TCC logo's gray loop */}
+          <circle cx="248" cy="350" r="218" stroke="rgba(162,165,170,0.13)" strokeWidth="1.5"/>
+          {/* Right loop — TCC logo's second loop */}
+          <circle cx="452" cy="350" r="218" stroke="rgba(162,165,170,0.07)" strokeWidth="1"/>
+          {/* Brand red accent arc — upper-right quarter of right loop */}
+          <path
+            className="arc-accent"
+            d="M 452 132 A 218 218 0 0 1 670 350"
+            stroke="rgba(201,64,53,0.42)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+          {/* Terminal dots at arc endpoints */}
+          <circle cx="452" cy="132" r="3.5" fill="rgba(201,64,53,0.55)"/>
+          <circle cx="670" cy="350" r="3.5" fill="rgba(201,64,53,0.55)"/>
+        </svg>
+      </div>
+
       <div className="wrap">
         <div className="hero-grid">
           <div>
@@ -8,9 +31,9 @@ export default function Hero() {
               TCC GROUP · HRIS CORE TEAM · HR 內容架構師 候選人
             </p>
             <h1 className="hero-name">
-              葉書<em>魁</em>
-              <br />
-              Calvin Yeh
+              <span className="hero-name-cn">葉書魁</span>
+              <span className="hero-name-divider" />
+              <span className="hero-name-en">Calvin Yeh</span>
             </h1>
             <p className="hero-subtitle">
               內容策略 × 變革溝通設計 × AI 工具整合
