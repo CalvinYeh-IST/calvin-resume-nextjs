@@ -83,8 +83,16 @@ section { padding: 80px 0; }
 #hero {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 72% 50%, rgba(162,165,170,0.055) 0%, transparent 52%),
-    linear-gradient(150deg, #061322 0%, #0F1B28 28%, #1D2530 52%, #0F1B28 74%, #061322 100%);
+    /* 對角銀灰光帶：左上強光 → 右下漸暗，製造拋光水泥感 */
+    linear-gradient(118deg,
+      rgba(205,210,216,0.38) 0%,
+      rgba(175,180,188,0.20) 25%,
+      rgba(155,160,168,0.08) 48%,
+      transparent 65%),
+    /* 右側弧形區域的銀光暈，呼應 TCC 無限符號圓環 */
+    radial-gradient(ellipse at 80% 44%, rgba(160,165,172,0.18) 0%, transparent 50%),
+    /* 基底：從較淡的藍灰 → 略深的炭藍，不再是近黑 */
+    linear-gradient(155deg, #1C2232 0%, #232D40 28%, #1A2238 55%, #111826 100%);
   display: flex; align-items: center;
   position: relative; overflow: hidden;
   padding: 80px 0;
@@ -92,9 +100,10 @@ section { padding: 80px 0; }
 #hero::before {
   content: '';
   position: absolute; inset: 0;
+  /* 細格紋：在較淡的背景上稍微可見 */
   background-image:
-    linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
   background-size: 64px 64px, 64px 64px;
 }
 
@@ -222,8 +231,8 @@ section { padding: 80px 0; }
   50% { transform: translateX(-50%) translateY(8px); opacity: 0.6; }
 }
 .hero-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(162,165,170,0.2);  /* 水泥銀灰邊框 */
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(162,165,170,0.28);
   border-radius: 4px; padding: 32px 28px;
   opacity: 0; animation: up 0.7s ease forwards 0.9s;
 }

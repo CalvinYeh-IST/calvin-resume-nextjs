@@ -5,22 +5,22 @@ export default function Hero() {
       <div className="hero-arc" aria-hidden="true">
         <svg viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Outer containing ring */}
-          <circle cx="350" cy="350" r="328" stroke="rgba(162,165,170,0.06)" strokeWidth="1"/>
+          <circle cx="350" cy="350" r="328" stroke="rgba(175,180,188,0.11)" strokeWidth="1"/>
           {/* Left loop — silver, TCC logo's gray loop */}
-          <circle cx="248" cy="350" r="218" stroke="rgba(162,165,170,0.13)" strokeWidth="1.5"/>
+          <circle cx="248" cy="350" r="218" stroke="rgba(180,185,192,0.22)" strokeWidth="2"/>
           {/* Right loop — TCC logo's second loop */}
-          <circle cx="452" cy="350" r="218" stroke="rgba(162,165,170,0.07)" strokeWidth="1"/>
+          <circle cx="452" cy="350" r="218" stroke="rgba(162,165,170,0.13)" strokeWidth="1.5"/>
           {/* Brand red accent arc — upper-right quarter of right loop */}
           <path
             className="arc-accent"
             d="M 452 132 A 218 218 0 0 1 670 350"
-            stroke="rgba(201,64,53,0.42)"
+            stroke="rgba(201,64,53,0.55)"
             strokeWidth="2.5"
             strokeLinecap="round"
           />
           {/* Terminal dots at arc endpoints */}
-          <circle cx="452" cy="132" r="3.5" fill="rgba(201,64,53,0.55)"/>
-          <circle cx="670" cy="350" r="3.5" fill="rgba(201,64,53,0.55)"/>
+          <circle cx="452" cy="132" r="3.5" fill="rgba(201,64,53,0.65)"/>
+          <circle cx="670" cy="350" r="3.5" fill="rgba(201,64,53,0.65)"/>
         </svg>
       </div>
 
