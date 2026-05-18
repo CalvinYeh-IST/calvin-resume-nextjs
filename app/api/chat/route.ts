@@ -109,11 +109,16 @@ export async function POST(req: NextRequest) {
         'Cache-Control': 'no-cache',
       },
     })
-  } catch (err) {
-    console.error('[chat route error]', err)
-    return NextResponse.json(
-      { error: '伺服器發生問題，請稍後再試。' },
-      { status: 500 }
-    )
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('[chat route error]', msg)
+
+    if (msg.includes('401') || msg.includes('Unauthorized') || msg.includes('Invalid API key')) {
+      return NextResponse.json({ error: 'API 金鑰無效，請聯繫管理員。' }, { status: 500 })
+    }
+    if (msg.includes('OPENAI_API_KEY') || !process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: '伺服器設定遺失，請稍後再試。' }, { status: 500 })
+    }
+    return NextResponse.json({ error: '伺服器發生問題，請稍後再試。' }, { status: 500 })
   }
 }
